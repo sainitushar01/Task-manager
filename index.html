@@ -12,6 +12,37 @@
   <title>Tasky</title>
 </head>
 <body>
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Add New Task</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="imageurl" class="form-label">Image Url</label>
+            <input type="url" class="form-control" id="imageurl" aria-describedby="imageUrl" placeholder="for eg: https://example.com/1.jpg"/>
+          </div>
+          <div class="mb-3">
+            <label for="tasktitle" class="form-label">Task Title</label>
+            <input type="text" class="form-control" id="tasktitle" aria-describedby="tasktitle" placeholder="for eg: Data Structures & Algorithms"/>
+          </div>
+          <div class="mb-3">
+            <label for="tasktype" class="form-label">Task Type</label>
+            <input type="text" class="form-control" id="tasktype" aria-describedby="tasktype" placeholder="for eg: Pc work"/>
+          </div>
+          <div class="mb-3">
+            <label for="Taskdescription" class="form-label">Task Description</label>
+            <textarea  rows="6" class="form-control" id="Taskdescription" aria-describedby="taskdescription" placeholder="for eg: Go through all the dsa's"></textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+    </div>
+  </div>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
       <a class="navbar-brand fw-bold text-primary" href="#">TasKy</a>
@@ -24,7 +55,11 @@
             <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
         </ul>
-        <button type="button" class="btn btn-primary"><i class="fas fa-plus"></i> Add New</button>
+        <button type="button" 
+        class="btn btn-primary" 
+        data-bs-toggle="modal" 
+        data-bs-target="#exampleModal">
+        <i class="fas fa-plus"></i> Add New</button>
       </div>
     </div>
   </nav>
@@ -56,43 +91,12 @@
         </div>
       </div>
     </div>
-    <div class="col-md-6 col-lg-4">
-      <div class="card ">
-        <div class="card-header d-flex justify-content-end gap-2">
-          <button type="button" class="btn btn-outline-success"><i class="fas fa-pencil-alt"></i></button>
-          <button type="button" class="btn btn-outline-danger"><i class="fas fa-trash-alt"></i></button>
-        </div>
-        <img src="https://tse3.mm.bing.net/th?id=OIP.Fr847tCgxAuoPmh5DjhdyQHaEZ&pid=Api&P=0&w=274&h=164" class="card-img-top" alt="parallel world">
-        <div class="card-body">
-          <h5 class="card-title">Comon lets go</h5>
-          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-        <div class="card-footer text-muted">
-          <button type="button" class="btn btn-outline-primary float-end">Open Task</button>
-        </div>
-      </div>
-    </div> <div class="col-md-6 col-lg-4">
-      <div class="card ">
-        <div class="card-header d-flex justify-content-end gap-2">
-          <button type="button" class="btn btn-outline-success"><i class="fas fa-pencil-alt"></i></button>
-          <button type="button" class="btn btn-outline-danger"><i class="fas fa-trash-alt"></i></button>
-        </div>
-        <img src="https://tse1.mm.bing.net/th?id=OIP.bcOkHyTnu2nMmgLReD0RpgHaE8&pid=Api&P=0&w=233&h=156" class="card-img-top" alt="parallel world">
-        <div class="card-body">
-          <h5 class="card-title">Comon lets go</h5>
-          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-        <div class="card-footer text-muted">
-          <button type="button" class="btn btn-outline-primary float-end">Open Task</button>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
-</script>
+  </script>
+  <script  src="index.js">
+  </script>
 </body>
 </html>
