@@ -1,2 +1,2 @@
 # Task-manager
-Webpage using awesome bootstrap( currently working)
+A responsive task manager webpage
